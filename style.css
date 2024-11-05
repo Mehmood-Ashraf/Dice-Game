@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, red, purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.page{
+    display: none;
+}
+
+.mainHeading{
+    font-size: 55px;
+    background-image: linear-gradient(to right, white, gray);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    position: relative;
+}
+
+.newGame{
+    position: absolute;
+    top: 40px;
+    left: 303px;
+}
+
+button{
+    padding: 5px;
+    border-radius: 10px;
+    padding-right: 18px;
+    padding-left: 18px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.dice{
+    position: absolute;
+    top: 162px;
+    left: 313px;
+    width: 80px;
+}
+
+.dice img{
+    width: 100%;
+}
+
+.rollDice{
+    position: absolute;
+    /* top: 40px; */
+    bottom: 162px;
+    left: 306px;
+}
+
+.hold{
+    position: absolute;
+    /* top: 40px; */
+    bottom: 100px;
+    left: 319px;
+}
+
+.section1, .section2{
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.roll{
+    animation: roll 0.6s;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 5px;
+}
+
+.rollnum{
+    font-size: 3rem;
+}
+
+.activePlayer{
+    background-color: lightgray;
+    cursor: pointer;
+
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
